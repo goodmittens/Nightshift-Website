@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kngihtshift</title>
+    <title>Knightshift | Development</title>
     <!-- Bootstrap CSS CDN -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Google Fonts CDN -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <style>
         /* General styling for the body */
         body {
             margin: 0; /* Remove default margin around the body */
-            font-family: 'Roboto', sans-serif; /* Apply Roboto font from Google Fonts */
+            font-family: 'Poppins', sans-serif; /* Apply Poppins font from Google Fonts */
             background-color: #000000; /* Set background color to black using hex code */
         }
         
         /* Header and footer styling */
         header, footer {
+            font-family: 'Montserrat', sans-serif; /* Apply Montserrat font for header and footer */
             position: fixed; /* Fix the header and footer to the top and bottom of the viewport */
             width: 100%; /* Ensure they stretch across the full width of the viewport */
             background-color: #333; /* Dark background color for both header and footer */
@@ -50,16 +55,16 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.0); /* Transparent background for the scrollbar track */
+            background: #000000; /* Black background for the scrollbar track */
         }
 
         ::-webkit-scrollbar-thumb {
-            background: rgba(0, 0, 0, 0.3); /* Semi-transparent background for the scrollbar thumb */
+            background: #333333; /* Dark gray background for the scrollbar thumb */
             border-radius: 10px; /* Rounded corners for the scrollbar thumb */
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: rgba(0, 0, 0, 1.0); /* Darker color when hovering over the scrollbar thumb */
+            background: #555555; /* Lighter gray color when hovering over the scrollbar thumb */
         }
 
         /* Card image styling */
@@ -73,14 +78,17 @@
     <!-- Header -->
     <header class="navbar navbar-expand-lg navbar-dark bg-dark">
         <!-- Navigation bar with Bootstrap classes -->
-        <a class="navbar-brand" href="index.html">Knightshift</a> <!-- Brand name/link -->
+        <a class="navbar-brand" href="landing.html">Knightshift</a> <!-- Brand name/link -->
         <ul class="navbar-nav ml-auto">
             <!-- Navigation links -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a> <!-- Link to Home page -->
+                <a class="nav-link" href="landing.html">Home</a> <!-- Link to Home page -->
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="development.html">Development</a> <!-- Link to Development page -->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="showcase.html">3D Models</a> <!-- Link to 3D Models page -->
             </li>
         </ul>
     </header>
@@ -88,23 +96,8 @@
     <!-- Main content -->
     <main class="container mt-4 main-container">
         <!-- Container for main content with Bootstrap styling -->
-        <div class="row">
-            <!-- Bootstrap grid row -->
-            <div class="col-md-6">
-                <!-- Bootstrap grid column -->
-                <div class="card">
-                    <!-- Bootstrap card component -->
-                    <img src="images/portfolio1.jpg" class="card-img-top" alt="Image">
-                    <!-- Image at the top of the card -->
-                    <div class="card-body">
-                        <!-- Card body containing content -->
-                        <h5 class="card-title">Card Title</h5> <!-- Card title -->
-                        <p class="card-text">Some quick example text.</p> <!-- Card text -->
-                        <a href="#" class="btn btn-primary">Go somewhere</a> <!-- Card button -->
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h1 class="text-white">Welcome to Knightshift</h1>
+        <p class="text-white">Explore our projects and learn more about our development efforts.</p>
     </main>
 
     <!-- Footer -->
