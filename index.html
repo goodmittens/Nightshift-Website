@@ -13,118 +13,25 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     
-    <style>
-        /* General page styling */
-        body {
-            margin: 0;
-            background-color: #000;
-            color: #fff;
-            font-family: 'Nunito', sans-serif; /* Default font for body text */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
 
-        /* Transparent fixed header styling with blur effect */
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            z-index: 1000;
-        }
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/default-page.css">
+    <link rel="stylesheet" href="styles/navbar-1.css">
 
-        .header img {
-            height: 50px;
-        }
 
-        .nav-links {
-            display: flex;
-        }
-
-        .nav-links a {
-            font-family: 'Montserrat', sans-serif; /* Use Montserrat for navigation links */
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            font-weight: 500;
-            transition: color 0.3s, border-bottom 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #008CBA;
-        }
-
-        .nav-links a.active {
-            border-bottom: 2px solid #008CBA;
-        }
-
-        /* Section styling */
-        .section {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        /* First section background image */
-        .section:first-child {
-            background: url('images/index/nightshift-transparent.png') no-repeat center center;
-            background-size: cover;
-            width: 100%;
-            min-height: 500px;
-        }
-
-        /* Hide the gallery section */
-        .gallery {
-            display: none; /* Completely hide the gallery */
-        }
-
-        /* Third section - better spacing & centering */
-        .section.bg-secondary {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 50px;
-            min-height: 300px;
-        }
-
-        .section.bg-secondary h2 {
-            font-family: 'Rajdhani', sans-serif; /* Use Rajdhani for main headings */
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .section.bg-secondary p {
-            font-family: 'Nunito', sans-serif; /* Use Nunito for body text */
-            font-size: 1.2rem;
-        }
-
-        /* Footer styling */
-        footer {
-            width: 100%;
-            background-color: #000;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: auto;
-            font-family: 'Montserrat', sans-serif; /* Use Montserrat for footer text */
-            font-size: 0.9rem;
-        }
-    </style>
 </head>
 <body>
-    <!-- Placeholder for dynamic header -->
-    <div id="header-placeholder"></div>
+    <!-- Header -->
+    <div class="header">
+        <img src="images/logo.png" alt="Nightshift Logo">
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="pages/about.html">About</a>
+            <a href="pages/portfolio.html">Portfolio</a>
+            <a href="pages/contact.html">Contact</a>
+        </nav>
+    </div>
 
     <!-- First section with background image -->
     <div class="section"></div>
@@ -132,7 +39,6 @@
     <!-- Second section with hidden gallery -->
     <div class="section bg-dark">
         <div class="gallery">
-            <!-- Gallery is hidden -->
             <img src="images/gallery/img1.jpg" alt="Gallery Image 1">
             <img src="images/gallery/img2.jpg" alt="Gallery Image 2">
             <img src="images/gallery/img3.jpg" alt="Gallery Image 3">
@@ -146,24 +52,9 @@
         <p>Please check back soon.</p>
     </div>
     
-    <!-- Placeholder for dynamic footer -->
-    <div id="footer-placeholder"></div>
-
-    <!-- JavaScript to dynamically load header and footer -->
-    <script>
-        async function loadHeaderFooter() {
-            // Load header
-            const headerResponse = await fetch('header.html');
-            const headerHTML = await headerResponse.text();
-            document.getElementById('header-placeholder').innerHTML = headerHTML;
-
-            // Load footer
-            const footerResponse = await fetch('footer.html');
-            const footerHTML = await footerResponse.text();
-            document.getElementById('footer-placeholder').innerHTML = footerHTML;
-        }
-
-        loadHeaderFooter();
-    </script>
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Nightshift. All rights reserved.
+    </footer>
 </body>
 </html>

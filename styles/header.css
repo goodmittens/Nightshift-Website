@@ -1,13 +1,38 @@
-.header-container {
+.header {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    z-index: 1000; /* Ensures it stays on top */
+    height: 60px; /* Adjust to your desired height */
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between; /* Align logo and navigation to opposite sides */
+    align-items: center; /* Vertically align items */
+    z-index: 1000;
 }
 
-.header {
-    width: 100%;
-    height: 60px;
-    background-color: rgba(0, 0, 0, 0.8);
+.header img {
+    height: 50px;
+}
+
+.nav-links {
+    text-align: right; /* Align links to the right */
+}
+
+.nav-links a {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 15px; /* Adds spacing between navigation links */
+    transition: color 0.3s, border-bottom 0.3s;
+    display: inline-block; /* Ensures the links remain inline */
+}
+
+.nav-links a:hover {
+    color: #008CBA;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #008CBA;
 }
