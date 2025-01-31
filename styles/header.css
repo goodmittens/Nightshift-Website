@@ -1,39 +1,9 @@
 .header {
     position: fixed;
     top: 0;
-    left: 0; /* Ensures the header starts at the left of the viewport */
-    width: 100%; /* Stretches the header to the full width of the viewport */
-    height: 60px; /* Keeps the height fixed */
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    /* display: flex;
-    justify-content: space-between; /* Align logo and navigation to opposite sides */
-    align-items: center; /* Vertically align items */
-    z-index: 1000;
-}
-
-.header img {
-    height: 50px;
-}
-
-.nav-links {
-    text-align: right; /* Aligns links to the right side */
-}
-
-.nav-links a {
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 15px; /* Adds spacing between navigation links */
-    transition: color 0.3s, border-bottom 0.3s;
-    display: inline-block;
-}
-
-.nav-links a:hover {
-    color: #008CBA;
-}
-
-.nav-links a.active {
-    border-bottom: 2px solid #008CBA;
+    left: 0;
+    width: 100%; /* Stretch across the viewport */
+    height: 60px; /* Fixed height */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for visibility */
+    z-index: 1000; /* Ensure it stays above other elements */
 }
