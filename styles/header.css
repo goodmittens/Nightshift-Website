@@ -2,14 +2,14 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px; /* Adjust to your desired height */
+    height: 60px; /* Adjust to your desired height */
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between; /* Align logo and navigation to opposite sides */
     align-items: center; /* Vertically align items */
     z-index: 1000;
-    padding: 0 20px; /* Adds spacing to the edges */
+    /* padding: 0 20px; /* Adds spacing to the edges */
 }
 
 .header img {
