@@ -8,52 +8,95 @@ body {
     align-items: center;
 }
 
-/* Section styling */
-.section {
+
+/* Style for the entire scrollbar */
+::-webkit-scrollbar {
+    width: 16px; /* Thicker scrollbar width */
+    height: 4px; /* Shorter height for the horizontal scrollbar */
+}
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: #020225; /* Thumb color */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+/* Hover effet for the thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: #0a0a59; /* Slightly lighter color on hover */
+}
+
+
+
+/* Section 1: Spacer for fixed header */
+.section1 {
+    height: 60px;
     width: 100%;
+}
+/* Section 2: Gallery Section */
+.section2 {
+    width: 100%;
+    background-color: #000;
+    /* background: url('../images/index/nightshift-transparent.png') no-repeat center center; */
+    background-size: cover;
+    min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    margin: 0;
 }
-
-/* First section background image */
-.section:first-child {
-    background: url('images/index/nightshift-transparent.png') no-repeat center center;
-    background-size: cover;
-    width: 100%;
-    min-height: 500px;
-}
-
-/* Hide the gallery section */
+/* Section 2: Gallery Element */
 .gallery {
-    display: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
-/* Third section - better spacing & centering */
-.section.bg-secondary {
+/* Section 2: Gallery Image */
+.gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+/* Section 3: Text Section */
+.section3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 50px;
+    padding: 50px 20px;
+    background-color: #222;
+    width: 100%;
     min-height: 300px;
 }
-
-.section.bg-secondary h2 {
+/* Section 3: h2 */
+.section3 h2 {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
-
-.section.bg-secondary p {
+/* Section 3: p */
+.section3 p {
     font-family: 'Nunito', sans-serif;
     font-size: 1.2rem;
 }
 
-/* Spacer for fixed header */
-.spacer {
-    height: 60px;
+
+
+
+/* Section About: About Text Section */
+.sectionabout {
+    width: 100%;
+    background-color: #000;
+    background-size: cover;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

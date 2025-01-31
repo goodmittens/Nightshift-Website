@@ -15,36 +15,40 @@
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/default-page.css">
-    <link rel="stylesheet" href="../styles/navbar-1.css">    
+    <link rel="stylesheet" href="../styles/navbar-1.css">
+    <!-- ../ is needed when sub directory used -->
 </head>
 
 <body>
     <!-- Header -->
     <div class="header">
-        <img src="images/index/nightshift-transparent.png" alt="Nightshift Logo">
+        <img src="../images/index/nightshift-transparent.png" alt="Nightshift Logo">
         <nav class="nav-links">
-            <a href="pages/home.html" class="active">Home</a>
-            <a href="pages/about.html">About</a>
-            <a href="pages/portfolio.html">Portfolio</a>
-            <a href="pages/contact.html">Contact</a>
+            <a href="../pages/home.html" class="active">home</a>
+            <a href="../pages/about.html">about</a>
+            <a href="../pages/portfolio.html">portfolio</a>
+            <a href="../pages/contact.html">contact</a>
         </nav>
     </div>
 
     <!-- First section with background image -->
-    <div class="section"></div>
+    <div class="section spacer"></div>
+
+    <!-- Section 1: Spacer  -->
+    <div class="section1"></div>
     
-    <!-- Second section with hidden gallery -->
-    <div class="section bg-dark">
+    <!-- Section 2: Gallery -->
+    <div class="section2">
         <div class="gallery">
-            <img src="images/gallery/img1.jpg" alt="Gallery Image 1">
-            <img src="images/gallery/img2.jpg" alt="Gallery Image 2">
-            <img src="images/gallery/img3.jpg" alt="Gallery Image 3">
-            <img src="images/gallery/img4.jpg" alt="Gallery Image 4">
+            <img src="../images/gallery/img1.jpg" alt="Gallery Image 1">
+            <img src="../images/gallery/img2.jpg" alt="Gallery Image 2">
+            <img src="../images/gallery/img3.jpg" alt="Gallery Image 3">
+            <img src="../images/gallery/img4.jpg" alt="Gallery Image 4">
         </div>
     </div>
     
-    <!-- Third section with improved spacing & centering -->
-    <div class="section bg-secondary">
+    <!-- Section 3: Text -->
+    <div class="section3">
         <h2>Site in Progress</h2>
         <p>Please check back soon.</p>
     </div>

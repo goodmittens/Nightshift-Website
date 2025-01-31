@@ -3,7 +3,7 @@
 }
 
 .nav-links a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     color: white;
     text-decoration: none;
     padding: 10px 15px;
@@ -12,9 +12,9 @@
 }
 
 .nav-links a:hover {
-    color: #008CBA;
+    color: #40407d;
 }
 
 .nav-links a.active {
-    border-bottom: 2px solid #008CBA;
+    border-bottom: 2px solid #020225;
 }
