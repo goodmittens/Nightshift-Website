@@ -9,17 +9,14 @@
     justify-content: space-between; /* Align logo and navigation to opposite sides */
     align-items: center; /* Vertically align items */
     z-index: 1000;
-    /* padding: 0 20px; /* Adds spacing to the edges */
 }
 
 .header img {
     height: 50px;
-    margin-right: 20px; /* Adjusts spacing between logo and navigation */
 }
 
 .nav-links {
-    display: flex;
-    gap: 15px; /* Adds spacing between navigation links */
+    text-align: right; /* Align links to the right */
 }
 
 .nav-links a {
@@ -27,7 +24,9 @@
     color: white;
     text-decoration: none;
     font-weight: 500;
+    margin-left: 15px; /* Adds spacing between navigation links */
     transition: color 0.3s, border-bottom 0.3s;
+    display: inline-block; /* Ensures the links remain inline */
 }
 
 .nav-links a:hover {
