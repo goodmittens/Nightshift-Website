@@ -1,0 +1,49 @@
+<header class="header">
+    <style>
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            z-index: 1000;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: 500;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #008CBA;
+        }
+
+        .nav-links a.active {
+            border-bottom: 2px solid #008CBA;
+        }
+    </style>
+
+    <img src="images/index/nightshift-transparent.png" alt="Nightshift Logo">
+    <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="pages/showcase.html">Projects</a>
+        <a href="pages/about.html">About</a>
+        <a href="pages/development.html">Contact</a>
+    </nav>
+</header>

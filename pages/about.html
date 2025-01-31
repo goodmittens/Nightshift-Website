@@ -3,123 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knightshift | About</title>
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Nightshift | About</title>
 
-    <!-- Google Fonts CDN -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        /* General styling for the body */
+        /* General Styling */
         body {
-            margin: 0; /* Remove default margin around the body */
-            font-family: 'Poppins', sans-serif; /* Apply Poppins font from Google Fonts */
-            background-color: #000000; /* Set background color to black using hex code */
-        }
-        
-        /* Header and footer styling */
-        header, footer {
-            font-family: 'Montserrat', sans-serif; /* Apply Montserrat font for header and footer */
-            position: fixed; /* Fix the header and footer to the top and bottom of the viewport */
-            width: 100%; /* Ensure they stretch across the full width of the viewport */
-            background-color: #333; /* Dark background color for both header and footer */
-            color: #fff; /* White text color for better contrast */
-            text-align: center; /* Center-align text inside the header and footer */
-            padding: 10px 0; /* Add padding to top and bottom for spacing */
-            z-index: 1000; /* Ensure they appear above other content */
-            left: 0; /* Align to the left edge of the viewport */
-        }
-        
-        header {
-            top: 0; /* Position header at the top of the viewport */
-        }
-        
-        footer {
-            bottom: 0; /* Position footer at the bottom of the viewport */
+            margin: 0;
+            font-family: 'Nunito', sans-serif; /* Default font for the body */
+            background-color: #000; /* Black background for a modern look */
+            color: #fff; /* White text for contrast */
         }
 
-        /* Main content container styling */
+        /* Main Content Styling */
         .main-container {
-            margin-top: 60px; /* Space for header */
-            margin-bottom: 60px; /* Space for footer */
-            min-height: calc(100vh - 120px); /* Set minimum height to full viewport height minus header and footer height */
-            overflow-y: scroll; /* Enable vertical scrolling if content overflows */
+            margin-top: 80px; /* Space for fixed header */
+            margin-bottom: 80px; /* Space for fixed footer */
+            padding: 20px;
+            text-align: center; /* Center-align text */
         }
 
-        /* Custom scrollbar styling for WebKit browsers (Chrome, Safari) */
-        ::-webkit-scrollbar {
-            width: 12px; /* Set width of the scrollbar */
+        .main-container h1 {
+            font-family: 'Rajdhani', sans-serif; /* Use Rajdhani for main headings */
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
-        ::-webkit-scrollbar-track {
-            background: #000000; /* Black background for the scrollbar track */
+        .main-container p {
+            font-family: 'Nunito', sans-serif; /* Use Nunito for body text */
+            font-size: 1.2rem;
+            margin-bottom: 40px;
         }
 
-        ::-webkit-scrollbar-thumb {
-            background: #333333; /* Dark gray background for the scrollbar thumb */
-            border-radius: 10px; /* Rounded corners for the scrollbar thumb */
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555555; /* Lighter gray color when hovering over the scrollbar thumb */
-        }
-
-        /* Card image styling */
-        .card-img-top {
-            width: 100%; /* Ensure the image stretches across the full width of the card */
-            height: auto; /* Maintain aspect ratio of the image */
+        /* Carousel Styling */
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px; /* Rounded corners for images */
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <!-- Navigation bar with Bootstrap classes -->
-        <a class="navbar-brand" href="index.html">Knightshift</a> <!-- Brand name/link -->
-        <ul class="navbar-nav ml-auto">
-            <!-- Navigation links -->
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a> <!-- Link to Home page -->
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="development.html">Development</a> <!-- Link to Development page -->
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="showcase.html">3D Models</a> <!-- Link to 3D Models page -->
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">Portfolio</a> <!-- Link to About page -->
-            </li>
-        </ul>
-    </header>
 
-    <!-- Main content -->
-    <main class="container mt-4 main-container">
-        <!-- Container for main content with Bootstrap styling -->
-        <h1 class="text-white">Welcome to Knightshift</h1>
-        <p class="text-white">Explore our projects and learn more about our development efforts.</p>
+    <!-- Placeholder for dynamic header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content Section -->
+    <main class="main-container">
+        <h1>About Nightshift</h1>
+        <p>Discover our projects, development journey, and passion for creativity. Explore our portfolio to learn more about Nightshift Studio.</p>
 
         <!-- Image Carousel -->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <!-- Carousel Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
+            
+            <!-- Carousel Items -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="images/your-image-1.jpg" alt="First slide">
+                    <img src="images/your-image-1.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="images/your-image-2.jpg" alt="Second slide">
+                    <img src="images/your-image-2.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="images/your-image-3.jpg" alt="Third slide">
+                    <img src="images/your-image-3.jpg" alt="Third slide">
                 </div>
             </div>
+            
+            <!-- Carousel Navigation -->
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -131,16 +94,27 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <!-- Footer with Bootstrap classes -->
-        <p>© 2024 Knightshift. All rights reserved.</p> <!-- Footer text -->
-    </footer>
+    <!-- Placeholder for dynamic footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to dynamically load header and footer -->
+    <script>
+        async function loadHeaderFooter() {
+            // Load header
+            const headerResponse = await fetch('header.html');
+            document.getElementById('header-placeholder').innerHTML = await headerResponse.text();
+
+            // Load footer
+            const footerResponse = await fetch('footer.html');
+            document.getElementById('footer-placeholder').innerHTML = await footerResponse.text();
+        }
+
+        loadHeaderFooter();
+    </script>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Includes jQuery, Popper.js, and Bootstrap JS for interactive components -->
 </body>
 </html>

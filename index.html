@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nightshift</title>
     
-    <!-- Bootstrap CSS for styling -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
@@ -14,6 +19,7 @@
             margin: 0;
             background-color: #000;
             color: #fff;
+            font-family: 'Nunito', sans-serif; /* Default font for body text */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -42,9 +48,11 @@
         }
 
         .nav-links a {
+            font-family: 'Montserrat', sans-serif; /* Use Montserrat for navigation links */
             color: white;
             text-decoration: none;
             padding: 10px 15px;
+            font-weight: 500;
             transition: color 0.3s, border-bottom 0.3s;
         }
 
@@ -90,6 +98,17 @@
             min-height: 300px;
         }
 
+        .section.bg-secondary h2 {
+            font-family: 'Rajdhani', sans-serif; /* Use Rajdhani for main headings */
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .section.bg-secondary p {
+            font-family: 'Nunito', sans-serif; /* Use Nunito for body text */
+            font-size: 1.2rem;
+        }
+
         /* Footer styling */
         footer {
             width: 100%;
@@ -98,21 +117,15 @@
             text-align: center;
             padding: 10px 0;
             margin-top: auto;
+            font-family: 'Montserrat', sans-serif; /* Use Montserrat for footer text */
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
-    <!-- Transparent fixed header -->
-    <header class="header">
-        <img src="images/index/nightshift-transparent.png" alt="Nightshift Logo">
-        <nav class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="pages/showcase.html">Projects</a>
-            <a href="pages/about.html">About</a>
-            <a href="pages/development.html">Contact</a>
-        </nav>        
-    </header>
-    
+    <!-- Placeholder for dynamic header -->
+    <div id="header-placeholder"></div>
+
     <!-- First section with background image -->
     <div class="section"></div>
     
@@ -133,9 +146,24 @@
         <p>Please check back soon.</p>
     </div>
     
-    <!-- Footer section -->
-    <footer>
-        <p>Copyright Nightshift Studio LLC 2025</p>
-    </footer>
+    <!-- Placeholder for dynamic footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to dynamically load header and footer -->
+    <script>
+        async function loadHeaderFooter() {
+            // Load header
+            const headerResponse = await fetch('header.html');
+            const headerHTML = await headerResponse.text();
+            document.getElementById('header-placeholder').innerHTML = headerHTML;
+
+            // Load footer
+            const footerResponse = await fetch('footer.html');
+            const footerHTML = await footerResponse.text();
+            document.getElementById('footer-placeholder').innerHTML = footerHTML;
+        }
+
+        loadHeaderFooter();
+    </script>
 </body>
 </html>
