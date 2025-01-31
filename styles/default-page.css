@@ -52,3 +52,8 @@ body {
     font-family: 'Nunito', sans-serif;
     font-size: 1.2rem;
 }
+
+/* Spacer for fixed header */
+.spacer {
+    height: 60px;
+}
