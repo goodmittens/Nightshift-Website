@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightshift</title>
+    
+    <!-- Bootstrap CSS for styling -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* General page styling */
+        body {
+            margin: 0; /* Remove default margin */
+            background-color: #000; /* Set background to black */
+            color: #fff; /* White text color */
+            display: flex;
+            flex-direction: column; /* Arrange sections vertically */
+            align-items: center; /* Center align content horizontally */
+        }
+
+        /* Transparent fixed header styling */
+        .header {
+            position: fixed; /* Pin to top of the page */
+            top: 0;
+            width: 100%; /* Full width */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            display: flex;
+            justify-content: space-between; /* Space between logo and navbar */
+            align-items: center;
+            padding: 15px 20px;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+
+        .header img {
+            height: 50px; /* Logo height */
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #008CBA;
+        }
+
+        /* Styling for all sections */
+        .section {
+            width: 100%; /* Make sections full width */
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            padding: 20px; /* Add spacing inside sections */
+            margin-top: 80px; /* Offset to avoid being covered by header */
+        }
+
+        /* First section styling with a background image */
+        .section:first-child {
+            background: url('images/index/nightshift-transparent.png') no-repeat center center;
+            background-size: contain; /* Ensures the whole image is visible */
+            background-repeat: no-repeat;
+            height: 600px; /* Set height to 100px */
+            width: 100%;
+            aspect-ratio: auto; /* Maintain original aspect ratio */
+        }
+
+        /* Second section styling for image gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            width: 80%;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Footer styling */
+        footer {
+            width: 100%; /* Full width footer */
+            background-color: #000000; /* Dark gray background */
+            color: white; /* White text color */
+            text-align: center; /* Center align text */
+            padding: 10px 0; /* Add padding */
+            margin-top: auto; /* Push footer to the bottom */
+        }
+    </style>
+</head>
+<body>
+    <!-- Transparent fixed header with logo and navbar -->
+    <header class="header">
+        <img src="images/index/nightshift-transparent.png" alt="Nightshift Logo"> <!-- Logo on the left -->
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    
+    <!-- First section with background image -->
+    <div class="section"></div>
+    
+    <!-- Second section with image gallery -->
+    <div class="section bg-dark">
+        <div class="gallery">
+            <img src="images/gallery/img1.jpg" alt="Gallery Image 1">
+            <img src="images/gallery/img2.jpg" alt="Gallery Image 2">
+            <img src="images/gallery/img3.jpg" alt="Gallery Image 3">
+            <img src="images/gallery/img4.jpg" alt="Gallery Image 4">
+        </div>
+    </div>
+    
+    <!-- Third section with placeholder text -->
+    <div class="section bg-secondary">
+        <h2>Site in Progress</h2>
+        <p>Please check back soon.</p>
+    </div>
+    
+    <!-- Footer section with copyright info -->
+    <footer>
+        <p>Copyright Nightshift Studio LLC 2025</p>
+    </footer>
+</body>
+</html>
