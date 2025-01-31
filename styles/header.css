@@ -6,7 +6,7 @@
     height: 60px; /* Keeps the height fixed */
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
-    display: flex;
+    /* display: flex;
     justify-content: space-between; /* Align logo and navigation to opposite sides */
     align-items: center; /* Vertically align items */
     z-index: 1000;
