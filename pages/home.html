@@ -24,10 +24,10 @@
     <div class="header">
         <img src="../images/index/nightshift-transparent.png" alt="Nightshift Logo">
         <nav class="nav-links">
-            <a href="../pages/home.html" class="active">home</a>
-            <a href="../pages/about.html">about</a>
-            <a href="../pages/portfolio.html">portfolio</a>
-            <a href="../pages/contact.html">contact</a>
+            <a href="../pages/home.html" class="hover-sound active">home</a>
+            <a href="../pages/about.html" class="hover-sound">about</a>
+            <a href="../pages/portfolio.html" class="hover-sound">portfolio</a>
+            <a href="../pages/contact.html" class="hover-sound">contact</a>
         </nav>
     </div>
 
@@ -57,5 +57,21 @@
     <footer>
         &copy; 2025 Nightshift. All rights reserved.
     </footer>
+
+    <!-- JavaScript for Hover Sound -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to play sound
+            function playHoverSound() {
+                const audio = new Audio('../audio/bop.mp3'); // Path to your sound file
+                audio.play();
+            }
+
+            // Attach hover event listener to elements with the "hover-sound" class
+            document.querySelectorAll('.hover-sound').forEach((element) => {
+                element.addEventListener('mouseenter', playHoverSound);
+            });
+        });
+    </script>
 </body>
 </html>
