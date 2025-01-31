@@ -2,11 +2,11 @@
     <style>
         .header {
             display: flex;
-            justify-content: center; /* Centers the content horizontally */
-            align-items: center; /* Centers the content vertically */
-            padding: 10px; /* Adjust padding as needed */
-            background-color: rgba(0, 0, 0, 0.5); /* Keep transparency if needed */
-            backdrop-filter: blur(10px);
+            justify-content: space-between; /* Align logo and navigation properly */
+            align-items: center; /* Vertically center logo and navigation */
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+            backdrop-filter: blur(10px); /* Optional blur effect */
         }
 
         .header img {
@@ -15,6 +15,7 @@
 
         .nav-links {
             display: flex;
+            gap: 15px; /* Add space between links */
         }
 
         .nav-links a {
@@ -35,13 +36,10 @@
         }
     </style>
 
-    <div class="header">
-        <img src="images/index/nightshift-transparent.png" alt="Nightshift Logo" style="height: 50px;">
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </div>
-
+    <img src="images/index/nightshift-transparent.png" alt="Nightshift Logo">
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
