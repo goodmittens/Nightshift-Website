@@ -1,69 +1,88 @@
 body {
     margin: 0;
-    background-color: #000;
-    color: #fff;
-    font-family: 'Nunito', sans-serif;
+    background-color: #000; /* Sets background color to black for dark theme */
+    color: #fff; /* Sets default text color to white for contrast */
+    font-family: 'Nunito', sans-serif; /* Applies a modern sans-serif font */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centers content horizontally */
 }
 
-
-/* Style for the entire scrollbar */
+/*********************************************************************************
+ * CUSTOM SCROLLBAR STYLING
+ * Enhances the appearance of the scrollbar for better aesthetics and usability
+ *********************************************************************************/
+/* Scrollbar: Defines width and height */
 ::-webkit-scrollbar {
-    width: 16px; /* Thicker scrollbar width */
-    height: 4px; /* Shorter height for the horizontal scrollbar */
+    width: 16px; /* Increases scrollbar width for visibility */
+    height: 4px; /* Adjusts height for horizontal scrollbars */
 }
-/* Scrollbar track */
+/* Scrollbar Track: Sets background and rounded corners */
 ::-webkit-scrollbar-track {
-    background: transparent; /* Transparent track */
-    border-radius: 10px; /* Rounded corners for the track */
+    background: transparent; /* Keeps track background invisible */
+    border-radius: 10px; /* Softens track edges */
 }
-/* Scrollbar thumb */
+/* Scrollbar Thumb: Defines color, shape, and hover effect */
 ::-webkit-scrollbar-thumb {
-    background: #020225; /* Thumb color */
-    border-radius: 10px; /* Rounded corners for the thumb */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    background: #020225; /* Dark blue for contrast */
+    border-radius: 10px; /* Rounded edges for smoother look */
+    transition: background-color 0.3s ease; /* Adds smooth transition effect */
 }
-/* Hover effet for the thumb */
+/* Scrollbar Thumb (Hover): Changes color when hovered */
 ::-webkit-scrollbar-thumb:hover {
-    background: #0a0a59; /* Slightly lighter color on hover */
+    background: #0a0a59; /* Slightly lighter shade on hover */
+}
+/*********************************************************************************
+ * SCROLL SNAPPING
+ *********************************************************************************/
+/* Scroll Snap: Enforces vertical scroll snapping */
+html {
+    scroll-snap-type: y mandatory;
+}
+/* Sections: Defines snap alignment and full-height sections */
+/*********************************************************************************
+ * Ensure these get updated with the latest changes
+ *********************************************************************************/
+.section, .section1, .section2, .section3, .section-about {
+    scroll-snap-align: start; /* Ensures sections align properly */
+    height: 100vh; /* Full viewport height */
 }
 
-
-
-/* Section 1: Spacer for fixed header */
-.section1 {
+/*********************************************************************************
+ * SECTIONS DESIGN
+ * Styling for different sections of the page, including galleries and text areas
+ *********************************************************************************/
+/* Header Section: Creates space for fixed headers */
+.header-spacer {
     height: 60px;
     width: 100%;
 }
-/* Section 2: Gallery Section */
-.section2 {
+/* Gallery Section: Centers content with dark background */
+.section-1 {
     width: 100%;
     background-color: #000;
-    /* background: url('../images/index/nightshift-transparent.png') no-repeat center center; */
     background-size: cover;
     min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-/* Section 2: Gallery Element */
+/* Gallery: Arranges images with spacing */
 .gallery {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
 }
-/* Section 2: Gallery Image */
+/* Gallery Images: Defines size, border, and shadow */
 .gallery img {
     width: 200px;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; /* Softens image corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adds subtle depth effect */
 }
-/* Section 3: Text Section */
-.section3 {
+/* Text Section: Centers text content */
+.section-WIP {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,24 +93,20 @@ body {
     width: 100%;
     min-height: 300px;
 }
-/* Section 3: h2 */
-.section3 h2 {
+/* Text Section Headers: Uses a bold, futuristic font */
+.section-WIP h2 {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
-/* Section 3: p */
-.section3 p {
+/* Text Section Paragraphs: Defines readable font size */
+.section-WIP p {
     font-family: 'Nunito', sans-serif;
     font-size: 1.2rem;
 }
-
-
-
-
-/* Section About: About Text Section */
-.sectionabout {
+/* About Section: Centers content on dark background */
+.section-about {
     width: 100%;
     background-color: #000;
     background-size: cover;
@@ -101,7 +116,10 @@ body {
     align-items: center;
 }
 
-/* Section Video: */
+/*********************************************************************************
+ * VIDEO SECTION
+ * Embeds a fullscreen video with custom styling
+ *********************************************************************************/
 .video-container {
     width: 100%;
     height: 100vh;
@@ -109,14 +127,51 @@ body {
     align-items: center;
     justify-content: center;
 }
+/* Video: Ensures video fills its container */
 .video-container video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+/* Hides default video controls */
 .video-container video::-webkit-media-controls {
     display: none !important;
 }
+/* Displays controls on hover */
 .video-container:hover video::-webkit-media-controls {
     display: block !important;
+}
+
+/*********************************************************************************
+ * FORUMS & ACCORDION STYLING
+ * Improves the layout and usability of feedback and forums sections
+ *********************************************************************************/
+/* Feedback Form Section: Provides spacing and width adjustments */
+#feedback-forms {
+    width: 100%;
+    padding: 50px 0; /* Adds vertical spacing */
+}
+/* Accordion Container: Centers and limits width */
+.feedback-accordion {
+    width: 100%;
+    max-width: 1200px; /* Limits width for better readability */
+    margin: 0 auto; /* Centers accordion */
+}
+/* Card: Defines dark theme for forum entries */
+.card {
+    width: 100%;
+    background-color: #111; /* Darker background for contrast */
+    border: 1px solid #333; /* Subtle border separation */
+}
+/* Card Header: Slightly lighter for contrast */
+.card-header {
+    background-color: #222;
+    border-bottom: 1px solid #444;
+}
+/* Card Body: Ensures embedded content fits well */
+.card-body iframe {
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
 }

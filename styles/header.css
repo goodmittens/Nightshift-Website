@@ -10,15 +10,16 @@
     align-items: center; /* Vertically align items */
     z-index: 1000;
 }
-
 .header img {
     height: 50px;
 }
 
+/*********************************************************************************
+ * NAV BAR
+ *********************************************************************************/
 .nav-links {
     text-align: right; /* Align links to the right */
 }
-
 .nav-links a {
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -28,11 +29,25 @@
     transition: color 0.3s, border-bottom 0.3s;
     display: inline-block; /* Ensures the links remain inline */
 }
-
 .nav-links a:hover {
-    color: #008CBA;
+    color: #0a0a59;
 }
-
 .nav-links a.active {
     border-bottom: 2px solid #008CBA;
+}
+
+/*********************************************************************************
+ * SCROLL SNAPPING
+ *********************************************************************************/
+/* Scroll Snap: Enforces vertical scroll snapping */
+html {
+    scroll-snap-type: y mandatory;
+}
+/* Sections: Defines snap alignment and full-height sections */
+/*********************************************************************************
+ * Ensure these get updated with the latest changes
+ *********************************************************************************/
+.header {
+    scroll-snap-align: start; /* Ensures sections align properly */
+    height: 60px; /* Full viewport height */
 }

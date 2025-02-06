@@ -1,11 +1,71 @@
-        /* Footer styling */
-        footer {
-            width: 100%;
-            background-color: #000;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: auto;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-        }
+/* Footer styling */
+footer {
+    width: 100%;
+    background-color: #000;
+    color: white;
+    font-family: 'Noto', sans-serif;
+    font-size: 0.9rem;
+    margin-top: auto;
+    padding: 20px 0;
+}
+
+/*********************************************************************************
+ * FOOTER MENUS
+ *********************************************************************************/
+.footer-menus {
+    display: flex;
+    justify-content: center; /* Center the menus horizontally */
+    gap: 40px; /* Reduce space between menus */
+    flex-wrap: wrap; /* Ensure menus are responsive */
+    margin-bottom: 15px; /* Space between menus and copyright text */
+}
+.footer-menu {
+    list-style: none;
+    font-family: 'Noto', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Left align individual menu items */
+    font-size: 0.3125rem !important; /* Force smaller font size */
+}
+.footer-menu li {
+    margin: 5px 0;
+}
+.footer-menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.3125rem !important; /* Force smaller font size */
+}
+.footer-menu a:hover {
+    color: #0a0a59;
+    font-size: 0.3125rem !important; /* Force smaller font size */
+}
+.footer-copyright {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/*********************************************************************************
+ * SCROLL SNAPPING
+ *********************************************************************************/
+html {
+    scroll-snap-type: y mandatory;
+}
+.footer-copyright {
+    scroll-snap-align: start;
+    height: 75px;
+}
+/*********************************************************************************
+ * SOCIAL BAR
+ *********************************************************************************/
+.social-bar {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+}

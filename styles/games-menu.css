@@ -1,0 +1,60 @@
+/*********************************************************************************
+ * NAV BAR
+ *********************************************************************************/
+ /* Header Section: Creates space for fixed headers */
+.header-spacer {
+    height: 60px;
+    width: 100%;
+}
+ /* Styles for Games Menu */
+.games-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+    background-color: #111;
+}
+.game-item {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    max-width: 300px;
+}
+.game-item:hover {
+    transform: scale(1.05);
+}
+.game-item a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.game-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #ffcc00;
+}
+.game-item h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+    padding: 15px;
+    background-color: #333;
+    margin: 0;
+}
+/*********************************************************************************
+ * SCROLL SNAPPING
+ *********************************************************************************/
+/* Scroll Snap: Enforces vertical scroll snapping */
+html {
+    scroll-snap-type: y mandatory;
+}
+/* Sections: Defines snap alignment and full-height sections */
+/*********************************************************************************
+ * Ensure these get updated with the latest changes
+ *********************************************************************************/
+.games-menu {
+    scroll-snap-align: start; /* Ensures sections align properly */
+    height: 100vh; /* Full viewport height */
+}

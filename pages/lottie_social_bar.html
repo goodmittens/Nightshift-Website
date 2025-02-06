@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Social Bar</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Nunito', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer {
+            width: 100%;
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            flex-direction: column;
+        }
+        
+        .social-bar {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <footer class="footer">
+        <div class="social-bar">
+            <a href="#" target="_blank" id="social1" class="social-icon"></a>
+            <a href="#" target="_blank" id="social2" class="social-icon"></a>
+            <a href="#" target="_blank" id="social3" class="social-icon"></a>
+        </div>
+        <p>Nightshift &copy; All Rights Reserved</p>
+    </footer>
+    
+    <script>
+        function loadLottieAnimation(id, path) {
+            lottie.loadAnimation({
+                container: document.getElementById(id),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: path // Provide the JSON file path for the animation
+            });
+        }
+        
+        // Placeholder Lottie animations
+        loadLottieAnimation('social1', 'placeholder1.json');
+        loadLottieAnimation('social2', 'placeholder2.json');
+        loadLottieAnimation('social3', 'placeholder3.json');
+        
+        // Assign actual URLs to social media icons
+        document.getElementById('social1').href = 'https://twitter.com'; // Example Twitter
+        document.getElementById('social2').href = 'https://facebook.com'; // Example Facebook
+        document.getElementById('social3').href = 'https://instagram.com'; // Example Instagram
+    </script>
+</body>
+</html>
