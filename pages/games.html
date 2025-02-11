@@ -19,6 +19,31 @@
     <link rel="stylesheet" href="../styles/games-menu.css">
     <link rel="icon" type="image/png" href="../images/icons/Nightshift.png">
     <link rel="shortcut icon" href="favicon.ico">    
+    <style>
+        .games-menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 20px;
+            flex-wrap: wrap;
+            background-color: #111;
+        }
+        .game-item {
+            background-color: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+            max-width: 300px;
+            flex: 1 1 calc(33.333% - 40px); /* Adjust width to prevent stretching */
+            margin: 20px; /* Add spacing */
+        }
+        .game-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 3px solid #ffcc00;
+        }
+    </style>
 </head>
 
 <body>
